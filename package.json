@@ -17,6 +17,7 @@
     "moment": "^2.29.4",
     "swiper": "^5.2.0",
     "vue": "^2.6.14",
+    "vue-clipboard2": "^0.3.3",
     "vue-router": "^3.5.1",
     "vuex": "^3.6.2",
     "vuex-persistedstate": "^4.1.0"

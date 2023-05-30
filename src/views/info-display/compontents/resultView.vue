@@ -43,6 +43,17 @@ export default defineComponent({
             //     this.infoData = res.data.records
             // })
         },
+    //     分享网址
+        copyLink(val) { // 复制链接  val 就是你需要复制的链接
+            this.$copyText(val).then(() => {
+                // console.log(e)
+                this.$message.success('复制成功！')
+            }, () => {
+                // console.log(e)
+
+                this.$message.error('复制失败！')
+            })
+        },
     },
     updated() {
         // console.log(this.$store.state.current)
@@ -99,7 +110,7 @@ export default defineComponent({
                             item.siteName
                             }}</span><span>热度：{{ item.hotValue }}</span></p>
                         <p class="obtainType">
-                            <span>分享&nbsp;&nbsp;|</span>
+                            <span  @click="copyLink(item.url)">分享&nbsp;&nbsp;|</span>
                             <span>原网址&nbsp;&nbsp;|</span>
                             <span>
                                 <a-dropdown>

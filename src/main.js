@@ -4,6 +4,9 @@ import router from './router'
 import store from './store'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
+import VueClipboard from 'vue-clipboard2'
+Vue.use(VueClipboard)
+
 Vue.use(Antd);
 
 Vue.config.productionTip = false

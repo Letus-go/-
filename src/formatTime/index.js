@@ -4,6 +4,7 @@ import moment from "moment/moment";
 // 获取几天前的时间
 export function getAgoDay(n=0){
     let date= new Date();
+
     let newDate = new Date(date.getTime() - n*24*60*60*1000);
     return newDate
 }
